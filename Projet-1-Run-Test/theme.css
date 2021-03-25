@@ -1,0 +1,211 @@
+
+
+.btnmode1{
+    position: absolute;
+    bottom: 0px;
+    left: 120px;
+    border-radius: 5px 5px 0px 0px;
+    background-color: #ff7eb4;
+    border: none;
+    color: #fff;
+    padding: 10px 10px 5px 10px;
+    font-style: italic;
+    font-family: 'Bad Script', cursive;
+    font-size: 20px;
+    transition: 0.6s;
+    outline: none;   
+}
+
+.btnmode2{
+    position: absolute;
+    bottom: 0px;
+    left: 250px;
+    border-radius: 5px 5px 0px 0px;
+    background-color: #003249;
+    border: none;
+    color: #fff;
+    padding: 10px 10px 5px 10px;
+    font-style: italic;
+    font-family: 'Bad Script', cursive;
+    font-size: 20px;
+    transition: 0.6s;
+    outline: none; 
+}
+
+.btnmode1.active{
+    padding-bottom: 15px;
+    
+}
+.btnmode2.active{
+    padding-bottom: 15px;
+}
+
+.banner.candy-mode{
+    background-image: url(images/bonbonbanner.png);
+    color: #fff;
+}
+.acceuilBox_box1.candy-mode{
+    background-color:#fd62a3;
+    color: #fff;
+}
+
+#head.candy-mode.sticky{
+    background-color: #ffb1d2;
+    filter: invert(0);
+}
+
+.banner.tacos-mode{
+    background-image: url(images/tacosbanner.png);
+    color: #fff;
+}
+.acceuilBox_box1.tacos-mode{
+    background-color:#bafd62;
+    color: #fff;
+}
+#head.tacos-mode.sticky{
+    background-color: #bafd62;
+    filter: invert(0);
+}
+
+@media screen and (max-width: 640px){
+
+    .btnmode1{
+        position: absolute;
+        bottom: 0px;
+        left: 10px; 
+        padding: 5px 5px 5px 5px;
+        font-size: 10px;
+        
+    }
+    
+    .btnmode2{
+        position: absolute;
+        bottom: 0px;
+        left: 80px; 
+        padding: 5px 5px 5px 5px;
+        font-size: 10px;
+    }
+}
+
+/*
+
+.toggle-button-cover
+{
+    display: table-cell;
+    position: relative;
+    width: 200px;
+    height: 140px;
+    box-sizing: border-box;
+}
+
+.button-cover
+{
+    height: 100px;
+    margin: 20px;
+    background-color: #fff;
+    box-shadow: 0 10px 20px -8px #c5d6d6;
+    border-radius: 4px;
+}
+
+.button-cover:before
+{
+    counter-increment: button-counter;
+    content: counter(button-counter);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: #d7e3e3;
+    font-size: 12px;
+    line-height: 1;
+    padding: 5px;
+}
+
+.button-cover, .knobs, .layer
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.button
+{
+    position: relative;
+    top: 50%;
+    width: 74px;
+    height: 36px;
+    margin: -20px auto 0 auto;
+    overflow: hidden;
+}
+
+.button.r, .button.r .layer
+{
+    border-radius: 100px;
+}
+
+.button.b2
+{
+    border-radius: 2px;
+}
+
+.checkbox
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.knobs
+{
+    z-index: 2;
+}
+
+.layer
+{
+    width: 100%;
+    background-color: #ebf7fc;
+    transition: 0.3s ease all;
+    z-index: 1;
+}
+#button-1 .knobs:before
+{
+    content: 'YES';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 20px;
+    height: 10px;
+    color: #fff;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+    padding: 9px 4px;
+    background-color: #003249;
+    border-radius: 50%;
+    transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
+}
+
+#button-1 .checkbox:checked + .knobs:before
+{
+    content: 'NO';
+    left: 42px;
+    background-color: #f43685;
+}
+
+#button-1 .checkbox:checked ~ .layer
+{
+    background-color: #fcebeb;
+}
+
+#button-1 .knobs, #button-1 .knobs:before, #button-1 .layer
+{
+    transition: 0.3s ease all;
+}
+*/

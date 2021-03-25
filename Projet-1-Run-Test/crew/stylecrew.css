@@ -1,0 +1,403 @@
+@import url('https://fonts.google.com/specimen/Gabriela?preview.text_type=custom%27');
+@import url('https://fonts.google.com/specimen/Poppins?preview.text_type=custom%27');
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; 
+}
+
+.infoBloc{
+    position: fixed;
+    font-size: 15px;
+    background-color: rgb(246,246, 246);
+    width: 100%;
+    height: 27px;
+    overflow: hidden;
+    padding: 5px; 
+    z-index: 100;
+}
+.infoBloc > :first-child {
+    display: inline-block;                /* modèle de boîte en ligne */
+    padding-right: 2em;                   /* un peu d'espace pour la transition */
+    padding-left: 100%;                   /* placement à droite du conteneur */
+    white-space: nowrap;                  /* pas de passage à la ligne */
+    animation: defilement 15s infinite linear;
+    will-change: transform;
+    cursor: pointer;
+  }
+
+  .infoBloc:hover :first-child {
+    animation-play-state: paused;
+}
+
+  @keyframes defilement {
+    0% {
+      transform: translate3d(0,0,0);      /* position initiale à droite */
+    }
+    100% {
+      transform: translate3d(-100%,0,0);  /* position finale à gauche */
+    }
+  }
+
+  header
+  {
+      position: fixed;
+      width: 100%;
+      padding:20px;
+      top: 27px;
+      left: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: 0.6s;
+      z-index: 1000;
+  }
+
+  header.sticky{
+    padding: 0px;
+	  background: #fff;
+    filter: invert(1);
+}
+
+header .logo
+{
+	  
+    width: 60px;
+    height: 60px;
+}
+
+header ul
+{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+header ul li
+{
+	position: relative;
+	list-style: none;
+}
+header ul li a
+{
+	position: relative;
+	display: inline-block;
+	margin: 0 15px;
+	padding: 5px 10px;
+	letter-spacing: 2px;
+	font-size: 20px;
+	font-weight: 500;
+	color: #111;
+	text-decoration: none;
+	transition: 0.6s;
+}
+header ul li a.active,
+header ul li a:hover
+{
+ background: #E1D3BF;
+}
+.banner{
+  position: relative;
+	height: 638px;
+	background-image: url(images/bannercrew.jpg);
+	background-size: cover;
+  transition: 0.6s;
+}
+.banner h1{
+position:absolute;
+font-family: 'Bad Script', cursive;
+font-size: 7em;
+color: #FFFFFF;
+bottom: 70px;
+right: 70px;
+font-weight: 400;
+  }
+
+.box{
+
+display:flex;
+flex-direction: row;
+justify-content:space-around;
+align-items: center;
+padding-top: 100px;
+padding-bottom: 100px;
+}
+.titleBox{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.titlecard{
+  margin-bottom: 20px;
+  margin-top: 20px;
+  font-size: 1.5em;
+  font-family: 'Bad Script', cursive;
+}
+.container {
+  
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  border-radius:300px ;
+
+} 
+.container .card{
+  position: relative;
+  overflow: hidden;
+  border-radius:300px ;
+  
+}
+
+.container .card .imgBX img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 300px;  
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5); 
+}
+.container .card .contentBx ::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 250px;
+
+  transform: scaleX(0);
+  transition: transform 0.5s ease-in-out;
+  transform-origin: right;
+  transition-delay: 0.5s;
+}
+.container .card:hover .contentBx ::before{
+  transform: scaleX(1);
+  transition: transform 0.5s ease-in-out;
+  transform-origin: left;
+  transition-delay: 0s;
+}
+.container .card .contentBX{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .card .contentBX .content{
+  position: relative;
+  z-index: 1;
+  transition: 0.5s;
+  transform: translateX(-300px); 
+  transition-delay: 0s;
+}
+.container .card:hover .contentBX .content{
+  transform: translateX(0px);
+  transition-delay: 0.1s;
+}
+.container .card .contentBX .content p {
+  font-size: 1em;
+  line-height: 1.4em;
+  font-weight: 12px;
+  padding: 50px;
+  width: 250px;
+  height: 350px;
+  color: #fff;
+  border-radius: 200px;
+  background: rgba(255, 255, 255, 0.05);
+	backdrop-filter: blur(5px);
+  font-family: 'Poppins', sans-serif;
+	z-index: 1;
+  transition: 0.1s;
+}
+.badge{
+  position: fixed;
+  bottom: 15px;
+  left: 15px;
+  width: 100px;
+  height: auto;
+  z-index: 15;
+  box-shadow: 0 0 0 0 rgba(61, 232, 75, 0.7);
+  border-radius: 50%;
+  background-color: rgba(61, 232, 75, 0.7);;
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/173024/jonathanlarradet_copy.png);
+  background-size:cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  background-color: rgba(61, 232, 75, 0.7);; 
+  -webkit-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+  -moz-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+  -ms-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+  animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+  transition: 0.6s;
+}
+
+
+@-webkit-keyframes pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
+@-moz-keyframes pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
+@-ms-keyframes pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
+@keyframes pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
+
+.badge:hover {
+  transform: scale(1.05);
+}
+
+.footer{
+  height: 160px;
+  width: 100%;
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  padding: 5px;
+}
+
+.footer img{
+  width: 160px;
+  height: auto;
+
+}
+.btnfooter {
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  padding: 15px 20px;
+  border: 3px solid #003249;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  transition: 0.3s;
+  font-weight: bold;
+  cursor: pointer;
+}
+.btnfooter:hover{
+  transform: scale(1.1);
+}
+.fab {
+  margin: 15px;
+  transition: 0.6s;
+}
+.fab:hover {
+  transform: scale(1.1);
+}
+.fab.fa-facebook {  
+  color: #3b5998;
+}
+.fab.fa-linkedin-in {
+  color: #00A0DC;
+}
+.fab.fa-instagram-square{
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  -webkit-background-clip: text;        
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@media screen and (max-width: 640px){
+	.banner h1{
+    
+    font-size: 3em;
+    color: #FFFFFF;
+    bottom: 30px;
+    right: 30px;
+    font-weight: 400;
+      }
+    
+  header{
+    padding: 0px;
+    z-index: 1000;
+    
+  }
+  
+  header.sticky{
+    padding: 0px;
+    z-index: 1000;
+  }
+
+  header .logo
+  {
+      position: relative;
+      width: 40px;
+      height: 40px;
+  }
+
+  .menu{
+    position: absolute;
+    top: 40px;
+    left: -100%;
+    display: block;
+    padding: 100px 50px;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    transition: 0.5s;
+    z-index:0;
+  }
+  .menu.active
+  {
+    left: 0;
+    
+  }
+  header ul li a
+  {
+    color: #111;
+    font-size: 25px;
+    margin: 20px;
+  }
+  .toggle{
+    width: 40px;
+    height: 40px;
+    background: url(images/menu.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    cursor: pointer;
+    filter: invert(1);
+    transition: 0.2s;
+  }
+  .toggle.active
+  {
+    background: url(images/close.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 25px;
+    cursor: pointer;
+    filter: invert(1);
+    transition: 0.2s;
+  }
+
+  header.sticky .toggle{
+    filter: invert(1);
+  }
+
+  .banner{
+    
+    height: 280px;
+    background-image: url(images/bannercrew.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    transition: 0.6s;
+  }
+  .box{
+
+    
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    }
+    .footer{
+      flex-direction: column;
+    }
+    .footer img{
+      display: none;
+    }
+    .btnfooter {
+      font-size: 10px;
+      padding: 10px 15px;
+      transition: 0.3s;
+      margin-bottom: 5px;
+    }
+    .badge{
+      width: 50px;    
+      }
+}

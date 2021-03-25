@@ -1,0 +1,464 @@
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
+@import url('https://fonts.google.com/specimen/Poppins?preview.text_type=custom%27');
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+.infoBloc{
+    position: fixed;
+    top: 0;
+    right: 0;
+    font-size: 15px;
+    background-color: rgb(246,246, 246);
+    width: 100%;
+    height: 27px;
+    overflow: hidden;
+    padding: 5px; 
+    z-index: 10;
+    font-style: italic;
+}
+.defil {
+    display: inline-block;                /* modèle de boîte en ligne */
+    padding-right: 2em;                   /* un peu d'espace pour la transition */
+    padding-left: 100%;                   /* placement à droite du conteneur */
+    white-space: nowrap;                  /* pas de passage à la ligne */
+    animation: defilement 15s infinite linear;
+    will-change: transform;
+    cursor: pointer;
+  }
+
+  .defil:hover {
+    animation-play-state: paused;
+}
+
+  @keyframes defilement {
+    0% {
+      transform: translate3d(0,0,0);      /* position initiale à droite */
+    }
+    100% {
+      transform: translate3d(-100%,0,0);  /* position finale à gauche */
+    }
+  }
+
+
+  header
+  {
+      position: fixed;
+      width: 100%;
+      padding:10px;
+      top: 27px;
+      left: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: 0.6s;
+      z-index: 1000;
+      filter: invert(1);
+      background-color: #E1D3BF;
+  }
+
+  header.sticky{
+    padding: 0px;
+	  background: #fff;
+    
+}
+
+header .logo
+{
+	  
+    width: 60px;
+    height: 60px;
+}
+
+header ul
+{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+header ul li
+{
+	position: relative;
+	list-style: none;
+}
+header ul li a
+{
+	position: relative;
+	display: inline-block;
+	margin: 0 15px;
+	padding: 5px 10px;
+	letter-spacing: 2px;
+	font-size: 20px;
+	font-weight: 500;
+	color: #111;
+	text-decoration: none;
+	transition: 0.6s;
+}
+header ul li a.active,
+header ul li a:hover
+{
+ background: #E1D3BF;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.panier{
+    position: fixed;
+    width: 100%;
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    background-color: #fff;
+    z-index: 1;
+    transition: 0.6s;
+}
+.panier.sticky{
+    top: 80px;
+}
+.panier .panier_title{
+    font-size: 2em;
+    font-family: 'Bad Script', cursive;
+    width: 80%;
+    height: 40%;
+    border-bottom: 2px solid grey;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+  
+}
+.panier .panier_user{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60%;
+    transition: 0.6s;
+}
+.panier .panier_user h2{
+    font-family: 'Poppins', sans-serif;
+    margin-left: 30px;
+}
+.panier .panier_user .panier_icon{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.panier .panier_user p{
+  margin-left: 10px;
+}
+.panier .panier_user .panierBox{
+  font-family: 'Bad Script', cursive;
+  font-size: 20px;
+  padding-left : 50px;
+}
+.panier .panier_user .panier_item{
+  font-family: 'Bad Script', cursive;
+  font-size: 20px;
+  color: #003249 ;
+  transition: 0.6s;
+}
+.panier .panier_user .panier_item .far{
+  color:#003249 ;
+}
+.check_panier{
+  margin: 15px;
+  margin-left: 50px;
+  padding: 10px 15px;
+  background-color: #fff;
+  border-radius: 25px;
+  border: 2px solid #E1D3BF;
+  outline: none;
+  cursor: pointer;
+  transition: 0.6s;
+  font-weight: 700;
+}
+.check_panier:hover{
+  transform: scale(1.1);
+}
+.resultCard{
+  transition: 0.6s;
+  transform: scale(1.5);
+}
+.box_viennoiserie{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 350px;
+  padding-top: 30px;
+  background-color: #E1D3BF;
+  width: 100%;
+}
+.box_viennoiserie h1{
+  font-family: 'Bad Script', cursive;
+  font-size: 3em;
+}
+.box_snacking{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+  background-color: #E1D3BF;
+  width: 100%;
+}
+.box_snacking h1{
+  font-family: 'Bad Script', cursive;
+  font-size: 3em;
+}
+.box_card{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #E1D3BF;
+    width: 100%;
+    text-align: center;
+    padding-top: 30px;
+
+}
+.card{
+    width: 40%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 35px;
+    transition: 0.9s;
+    margin: 15px;
+    background-color: #fff;
+
+}
+.card:hover{
+    transform: scale(1.05);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+.card .card_text{
+    line-height: 1.5em;
+    padding: 20px;
+}
+.card h3{
+    font-family: 'Bad Script', cursive;
+    font-size: 2em;
+}
+.card img{
+    width: 50%;
+    height: auto;
+}
+.card .card_add{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.card .card_add .price{
+    width: 30%;
+    font-family: 'Bad Script', cursive;
+    font-size: 2em;
+}
+.card .card_add .add_button{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.card .card_add .add_button button{
+    margin: 15px;
+    padding: 10px 15px;
+    background-color: #fff;
+    border-radius: 25px;
+    border: 2px solid #E1D3BF;
+    outline: none;
+    cursor: pointer;
+}
+.card .card_add .add_buttonok button{
+    margin: 15px;
+    padding: 10px 15px;
+    background-color:#003249;
+    color: #fff;
+    border: 2px solid #E1D3BF;
+    outline: none;
+}
+
+#result1{
+  transition: 0.6s;
+}
+
+#result1.translate{
+    transform: scale(1.2);
+}
+.page-link{
+  width: 20px;
+}
+@media screen and (max-width: 640px){
+	
+    header{
+      padding: 0px;
+      z-index: 1000;
+      
+    }
+    
+    header.sticky{
+      padding: 0px;
+      z-index: 1000;
+    }
+
+    header .logo
+    {
+        position: relative;
+        width: 40px;
+        height: 40px;
+    }
+
+    .menu{
+      position: absolute;
+      top: 40px;
+      left: -100%;
+      display: block;
+      padding: 100px 50px;
+      text-align: center;
+      width: 100%;
+      height: 100vh;
+      background: #fff;
+      transition: 0.5s;
+      z-index:0;
+    }
+    .menu.active
+    {
+      left: 0;
+      
+    }
+    header ul li a
+    {
+      color: #111;
+      font-size: 25px;
+      margin: 20px;
+    }
+    .toggle{
+      width: 40px;
+      height: 40px;
+      background: url(icon/menu.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 30px;
+      cursor: pointer;
+      filter: invert(1);
+      transition: 0.2s;
+    }
+    .toggle.active
+    {
+      background: url(icon/close.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 25px;
+      cursor: pointer;
+      filter: invert(1);
+      transition: 0.2s;
+    }
+  
+    header.sticky .toggle{
+      filter: invert(1);
+    }
+  
+    .box_viennoiserie h1{
+      
+      font-size: 2em;
+    }
+  
+    .box_snacking h1{
+      
+      font-size: 2em;
+    }
+ 
+    .card{
+        width: 90%;
+        padding: 15px;
+    
+    }
+    .addPanier{
+      display: none;
+    }
+    .card .card_add .price{
+      font-size: 1em;
+      letter-spacing: 2px;
+  }
+  .panier{
+    
+    top: 65px;
+  
+}
+.panier.sticky{
+  top: 65px;
+}
+
+
+.panier .panier_user{
+  
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.panier .panier_title{
+  display: none;
+
+}
+.panier_price{
+  position: absolute;
+  bottom: 20px;
+  left : 20px;
+  text-align: center;
+}
+
+.panier .panier_user .panierBox{
+  font-size: 20px;
+  padding-left : 0px;
+}
+.check_panier{
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  margin: 0px;
+  padding: 10px;
+
+}
+.fas.fa-euro-sign{
+  display: none;
+}
+.panier{ 
+  height: 250px;
+}
+.panier_user{
+  height: 100%;
+}
+.panier_icon{
+  margin: 0px;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+}
+
+}

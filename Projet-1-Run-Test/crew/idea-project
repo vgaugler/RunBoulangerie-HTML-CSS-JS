@@ -1,0 +1,35 @@
+Pourquoi une personne visiterait ta page web, quel est son besoin ?
+Découvrir l'histoire de la boulangerie, l'adresse, les produits et le contacter.
+
+Quelles informations aurait-elle besoin de trouver ?
+- Présentation de la boulangerie
+- L'adresse
+- Les produits
+- La page contact
+
+Quelles actions voudrait-elle accomplir sur ton site ?
+- contacter via le formulaire /ou téléphone
+- voir la position de la boulangerie
+
+Quelles fonctionnalités ou quels éléments de contenu vont répondre à ces besoins ?
+// Les éléments //
+- Barre de navigation : accueil / nos produits / notre équipe / contact 
+- Navigation réseaux sociaux 
+- Afficher logo uber eats en bas du site
+- // Bouton menu qui ramène aux produits //
+/-- Les fonctionnalités --/
+  /!\ voir la maquette /!\
+
+
+Présentation du projet :
+
+Nous sommes saturn group, voic Antonio / Yassine / Victor et moi même (Guigui).
+Les fonctionnalités de notre site seront :
+- Afficher la boutique et les produits
+- Entrer en contact avec l'entreprise / le situer (adresse / horaires d'ouvertures / dispo ubereats)
+- Présentation de l'équipe
+
+MVP :
+- La nav
+- La présentation des produits
+

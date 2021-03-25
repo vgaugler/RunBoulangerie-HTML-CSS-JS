@@ -1,0 +1,708 @@
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
+@import url('https://fonts.google.com/specimen/Poppins?preview.text_type=custom%27');
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+.infoBloc{
+    position: fixed;
+    top: 0;
+    right: 0;
+    font-size: 15px;
+    background-color: rgb(246,246, 246);
+    width: 100%;
+    height: 27px;
+    overflow: hidden;
+    padding: 5px; 
+    z-index: 10;
+    font-style: italic;
+}
+.defil {
+    display: inline-block;                /* modèle de boîte en ligne */
+    padding-right: 2em;                   /* un peu d'espace pour la transition */
+    padding-left: 100%;                   /* placement à droite du conteneur */
+    white-space: nowrap;                  /* pas de passage à la ligne */
+    animation: defilement 15s infinite linear;
+    will-change: transform;
+    cursor: pointer;
+  }
+
+  .defil:hover {
+    animation-play-state: paused;
+}
+
+  @keyframes defilement {
+    0% {
+      transform: translate3d(0,0,0);      /* position initiale à droite */
+    }
+    100% {
+      transform: translate3d(-100%,0,0);  /* position finale à gauche */
+    }
+  }
+
+
+  header
+  {
+      position: fixed;
+      width: 100%;
+      padding:20px;
+      top: 27px;
+      left: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: 0.6s;
+      z-index: 1000;
+  }
+
+  header.sticky{
+    padding: 0px;
+	  background: #fff;
+    filter: invert(1);
+}
+
+header .logo
+{
+	  
+    width: 60px;
+    height: 60px;
+}
+
+header ul
+{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+header ul li
+{
+	position: relative;
+	list-style: none;
+}
+header ul li a
+{
+	position: relative;
+	display: inline-block;
+	margin: 0 15px;
+	padding: 5px 10px;
+	letter-spacing: 2px;
+	font-size: 20px;
+	font-weight: 500;
+	color: #111;
+	text-decoration: none;
+	transition: 0.6s;
+}
+header ul li a.active,
+header ul li a:hover
+{
+ background: #E1D3BF;
+}
+
+a.commandez {
+  margin-left: 50px;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  padding: 15px 20px;
+  border: 3px solid #003249;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  transition: 0.3s;
+  font-weight: bold;
+  cursor: pointer;
+}
+a.commandez:hover{
+  transform: scale(1.1);
+}
+
+.banner{
+	position: relative;
+	height: 638px;
+	background-image: url(images/banner.png);
+	background-size: cover;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+  transition: 0.6s;
+
+}
+
+h2{
+    position: absolute;
+    bottom: 70px;
+    right: 70px;
+    font-family: 'Bad Script', cursive;
+    font-size: 7em;
+    font-weight: 400;
+  
+}
+.banner h3{
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  font-family: 'Bad Script', cursive;
+  font-size: 3em;
+  font-weight: 400;
+}
+.accueilBox{
+    display: flex;
+
+}
+.acceuilBox_box1{
+    height: 386px;
+    width: 60%;
+    background-color: #E1D3BF ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    transition: 0.6s;
+}
+
+.acceuilBox_box1 p{
+    font-size: 3em;
+    font-family: 'Bad Script', cursive;
+
+}
+
+.acceuilBox_box1Title{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+.acceuilBox_box1Title img {
+    width: 250px;
+    height: auto;
+    margin-right: 50px;
+}
+.acceuilBox_box1Title p{
+   font-size: 2em;
+   margin-left: 80px;
+}
+.acceuilBox_box1Network{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    margin-right: 100px;
+    
+}
+.fab {
+    margin: 15px;
+    transition: 0.6s;
+}
+.fab:hover {
+    transform: scale(1.1);
+}
+.fab.fa-facebook {  
+    color: #3b5998;
+}
+.fab.fa-linkedin-in {
+    color: #00A0DC;
+}
+.fab.fa-instagram-square{
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    -webkit-background-clip: text;        
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.badge{
+    position: fixed;
+    bottom: 15px;
+    left: 15px;
+    width: 100px;
+    height: auto;
+    z-index: 15;
+    box-shadow: 0 0 0 0 rgba(61, 232, 75, 0.7);
+    border-radius: 50%;
+    background-color: rgba(61, 232, 75, 0.7);;
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/173024/jonathanlarradet_copy.png);
+    background-size:cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    background-color: rgba(61, 232, 75, 0.7);; 
+    -webkit-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    -moz-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    -ms-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    transition: 0.6s;
+}
+
+
+@-webkit-keyframes pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
+@-moz-keyframes pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
+@-ms-keyframes pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
+@keyframes pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
+
+.badge:hover {
+    transform: scale(1.05);
+}
+
+.accueilBox_slider{
+    width: 40%;
+    height: 386px;
+    overflow: hidden;
+  }
+  
+  .slides{
+    width: 500%;
+    height: 500px;
+    display: flex;
+  }
+  
+  .slides input{
+    display: none;
+  }
+  
+  .slide{
+    width: 20%;
+    transition: 2s;
+  }
+  
+  .slide img{
+    width: 100%;
+    height: 386px;
+  }
+
+  .navigation-manual{
+    position: absolute;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -150px;
+  }
+  
+  .manual-btn{
+    border: 2px solid #fff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+  }
+  
+  .manual-btn:not(:last-child){
+    margin-right: 40px;
+  }
+  
+  .manual-btn:hover{
+    background: #fff;
+  }
+  
+  #radio1:checked ~ .first{
+    margin-left: 0;
+  }
+  
+  #radio2:checked ~ .first{
+    margin-left: -20%;
+  }
+  
+  #radio3:checked ~ .first{
+    margin-left: -40%;
+  }
+  
+  #radio4:checked ~ .first{
+    margin-left: -60%;
+  }
+  
+  /*css for automatic navigation*/
+  
+  .navigation-auto{
+    position: absolute;
+    display: flex;
+    width: 40%;
+    justify-content: center;
+    margin-top: 350px;
+  }
+  
+  .navigation-auto div{
+    border: 2px solid #fff;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+  }
+  
+  .navigation-auto div:not(:last-child){
+    margin-right: 40px;
+  }
+  
+  #radio1:checked ~ .navigation-auto .auto-btn1{
+    background: #fff;
+  }
+  
+  #radio2:checked ~ .navigation-auto .auto-btn2{
+    background: #fff;
+  }
+  
+  #radio3:checked ~ .navigation-auto .auto-btn3{
+    background: #fff;
+  }
+  
+  #radio4:checked ~ .navigation-auto .auto-btn4{
+    background: #fff;
+  }
+
+.customerBox{
+  display: flex;
+}
+.customerBox_review{
+height: 386px;
+width: 60%;
+display: flex;
+justify-content: center;
+align-items: center;
+background-image: url('images/review.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+}
+.customerBox_title{
+   font-size: 2em;
+    color: #fff;
+   font-family: 'Bad Script', cursive;
+}
+.customerBox_presentation{
+  height: 386px;
+  width: 40%;
+  background-color:  #003249;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+.slider{
+  position: relative;
+	width: 80%;
+	height: 60%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background:#fff;
+	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+	overflow: hidden;
+  border: 5px solid #E1D3BF;
+  margin-bottom: 20px;
+}
+.slider:before{
+    content:"";
+    background-size: 100%;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background-image: url(icon/quote1.png) ;
+    background-repeat: no-repeat;
+    top: 1em;
+    left: .7em;
+    z-index: 1000;
+}
+.slider:after{
+  content:"";
+  background-size: 100%;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-image: url(icon/quote2.png) ;
+  background-repeat: no-repeat;
+  bottom: .5em;
+  right: .7em;
+  z-index: 1000;
+}
+
+.contentSlider{
+  position: absolute;
+	width: 200%;
+	margin: 0;            
+	padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  	/*CSS3 keyframes animation*/
+	animation-name: AutoSlide;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+}
+.sliderText{
+  width: 50%;
+  padding-left: 12.5%;
+  padding-right: 10%;
+  
+}
+.sliderText p{
+  color: #111;
+  font-size: 20px;
+  font-family: 'Poppins', sans-serif;
+  line-height: 32px;
+  font-style: italic;
+
+  
+}
+.sliderText h3{
+  font-size: 1em;
+  font-family: 'Bad Script', cursive;
+  color: #111;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+
+@keyframes AutoSlide {
+	0%, 25%, 100% {
+		left: 0px; /*1ère image*/
+	}
+	35%, 80% {
+		left: -100%; /*2ème image*/
+	}
+
+}
+
+.footer{
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  padding: 5px;
+}
+
+.footer img{
+  width: 100px;
+  height: auto;
+}
+.btnfooter {
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  padding: 15px 20px;
+  border: 3px solid #003249;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  transition: 0.3s;
+  font-weight: bold;
+  cursor: pointer;
+}
+.btnfooter:hover{
+  transform: scale(1.1);
+}
+  @media screen and (max-width: 640px){
+	
+    header{
+      padding: 0px;
+      z-index: 1000;
+      
+    }
+    
+    header.sticky{
+      padding: 0px;
+      z-index: 1000;
+    }
+
+    header .logo
+    {
+        position: relative;
+        width: 40px;
+        height: 40px;
+    }
+
+    .menu{
+      position: absolute;
+      top: 40px;
+      left: -100%;
+      display: block;
+      padding: 100px 50px;
+      text-align: center;
+      width: 100%;
+      height: 100vh;
+      background: #fff;
+      transition: 0.5s;
+      z-index:0;
+    }
+    .menu.active
+    {
+      left: 0;
+      
+    }
+    header ul li a
+    {
+      color: #111;
+      font-size: 25px;
+      margin: 20px;
+    }
+    .toggle{
+      width: 40px;
+      height: 40px;
+      background: url(icon/menu.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 30px;
+      cursor: pointer;
+      filter: invert(1);
+      transition: 0.2s;
+    }
+    .toggle.active
+    {
+      background: url(icon/close.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 25px;
+      cursor: pointer;
+      filter: invert(1);
+      transition: 0.2s;
+    }
+  
+    header.sticky .toggle{
+      filter: invert(1);
+    }
+    .accueilBox{
+      display: flex;
+      flex-direction: column;
+  
+  }
+  .acceuilBox_box1{
+    height: 250px;
+    width: 100%;
+}
+
+.acceuilBox_box1 p{
+    font-size: 1em;
+    font-family: 'Bad Script', cursive;
+    margin-left: 10px;
+
+}
+
+
+.acceuilBox_box1Title img {
+    width: 100px;
+    height: auto;
+    margin-right: 10px;
+}
+.acceuilBox_box1Network{
+  
+  align-items: center;
+  justify-content: center;
+  margin-right: 0px;
+  
+}
+
+.accueilBox_slider{
+  width: 100%;
+  height: 250px;
+}
+
+.slides{
+  width: 500%;
+  height: 500px;
+  display: flex;
+}
+
+.slide img{
+  width: 100%;
+  height: 250px;
+}
+
+.navigation-manual{
+  width: 100%; 
+  margin-top: -275px;
+}
+
+
+.navigation-auto{
+  width: 100%;
+  margin-top: 225px;
+}
+.badge{
+  width: 50px;    
+  }
+
+.banner{
+    height: 400px;
+    background-image: url(images/bannerMobile.png);
+    transition: 0.6s;
+    background-position: center;
+  
+  }
+  
+h2{
+      
+      bottom: 0px;
+      right: 5px;
+      font-family: 'Bad Script', cursive;
+      font-size: 5em;
+      font-weight: 400;
+  }
+.banner h3{
+     bottom: 0px;
+      right: 10px;
+      font-family: 'Bad Script', cursive;
+      font-size: 1em;
+      font-weight: 400;
+}
+.customerBox{
+  display: flex;
+  flex-direction: column;
+}
+.customerBox_review{
+height: 250px;
+width: 100%;
+
+}
+.customerBox_presentation{
+  height: 250px;
+  width: 100%;
+}
+.sliderText{
+  width: 50%;
+  padding-left: 8%;
+  padding-right: 5%;  
+}
+.sliderText p{
+  font-size: 15px;
+  line-height: 20px;
+}
+.sliderText h3{
+  font-size: 15px;
+  font-family: 'Bad Script', cursive;
+  margin-bottom: 5px;
+}
+.slider:before{
+  width: 15px;
+  height: 15px;
+}
+.slider:after{
+width: 15px;
+height: 15px;
+
+}
+.slider{
+  margin-bottom: 15px;
+}
+.footer{
+  flex-direction: column;
+}
+.footer img{
+  display: none;
+}
+.btnfooter {
+  font-size: 10px;
+  padding: 10px 15px;
+  transition: 0.3s;
+  margin-bottom: 5px;
+}
+a.commandez {
+  margin-left: 10px;
+  margin-bottom: 170px;
+  padding: 5px 10px;
+  font-size: 10px;
+}
+}

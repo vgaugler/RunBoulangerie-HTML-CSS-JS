@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-EDGE">
+        <meta name="viewport" content="width=device-width, initial-scale-1.0">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+        <link href="./product.css" rel="stylesheet">
+
+        <title>Яun Boulangerie Pâtisserie</title>
+    </head>
+
+    <body>
+        <main>
+            <div class="homepage">
+                <div class="navigation-bar">
+                    <div class="sticky">
+                        <div class="info-scrolling">
+                            <div> Adresse, numéro de téléphone, ouvert 7/7 </div>
+                        </div>
+                        <!-- START NAVIGATION BAR -->
+                        <header id="head">
+                            <img src="./images/logo/logo.png" class="logo">
+                            <div class="toggle" onclick="toggleMenu();"></div>
+                            <ul class="menu">
+                                <li class="anav"> <a href="../index.html"  onclick="toggleMenu();">Home</a></li>
+                                <li class="anav"> <a href="./product.html" class="active"  onclick="toggleMenu();"> Nos produits </a> </li>
+                                <li class="anav"> <a href="../crew/crew.html" onclick="toggleMenu();"> Crew</a></li>
+                                <li class="anav"> <a href="../contact/contact.html" onclick="toggleMenu();"> Contact</a></li>
+                            </ul>
+                        </header> 
+                        <!-- END NAVIGATION BAR -->
+                    </div>
+                </div>
+                <div class="hero-wrapper home">
+                    <div class="background-skewed">
+                        <h1 class="title-product">Nos Produits</h2>
+                            <a class="commandez" href="/pagecommande/commande2.html">Commandez</a>
+                        <div class="vitrine-container">
+                            <div class="container-img">
+                                <div class="patisserie">
+                                    <h2 class="title-img">Pâtisseries</h2>
+                                    <div id="slider1" class="element">
+                                        <img src="./images/pâtisserie/macaron-blanc.jpg" alt="Macarons fond blanc" id="slide1" class="border-radius">
+                                        <div id="precedent1" onclick="ChangeSlide(-1)"><</div>
+                                        <div id="suivant1" onclick="ChangeSlide(1)">></div>
+                                        <div class="fiche-commentaire"></div>
+                                    </div>
+                                </div>
+                                <div class="viennoiseries">
+                                    <h2 class="title-img">Viennoiseries</h2>
+                                    <div id="slider2" class="element">
+                                        <img src="./images/viennoiseries/croissant-sucre.jpg" alt="Croissant sucre" id="slide2" class="border-radius">
+                                        <div id="precedent2" onclick="ChangeSlide2(-1)"><</div>
+                                        <div id="suivant2" onclick="ChangeSlide2(1)">></div>
+                                        <div class="fiche-commentaire"></div>
+                                    </div>
+                                </div>
+                                <div class="snacking">
+                                    <h2 class="title-img">Snacking</h2>
+                                    <div id="slider3" class="element">
+                                        <img src="./images/snacking/salade.jpg" alt="Salade" id="slide3" class="border-radius">
+                                        <div id="precedent3" onclick="ChangeSlide3(-1)"><</div>
+                                        <div id="suivant3" onclick="ChangeSlide3(1)">></div>
+                                        <div class="fiche-commentaire"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <section class="footer">
+
+                    <div class="acceuilBox_box1IconNetwork">
+                      <a href="https://www.linkedin.com/home/?originalSubdomain=fr" target="_blank"><i class="fab fa-linkedin-in fa-2x"></i></a>
+                      <a href="https://www.facebook.com/pages/category/Just-For-Fun/Run-Boulangerie-P%C3%A2tisserie-110002427178075/" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
+                      <a href="https://www.instagram.com/run_patisserieboulangerie/?hl=fr" target="_blank"><i class="fab fa-instagram-square fa-2x"></i></a>
+                  </div>
+                
+                    <img src="./images/logo/logo.png" class="logo">
+                
+                    <a class="btnfooter">Contactez nous</a>
+                
+                </section>
+            </div>
+        </main>
+        <script src="./product.js"></script>
+    </body>
+</html>
