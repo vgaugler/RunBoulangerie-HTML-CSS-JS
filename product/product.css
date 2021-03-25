@@ -64,6 +64,7 @@ a.commandez {
     transition: 0.3s;
     font-weight: bold;
     cursor: pointer;
+    color: #003249;
   }
   a.commandez:hover{
     transform: scale(1.1);
