@@ -1,178 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
-    <link href="theme.css" rel="stylesheet">
-    <link href="style-commande.css" rel="stylesheet">
-    <title> Яun Boulangerie Pâtisserie </title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+    <link href="theme.css" rel="stylesheet" />
+    <link href="style-commande.css" rel="stylesheet" />
+    <title>Яun Boulangerie Pâtisserie</title>
+  </head>
+  <body>
     <div class="infoBloc">
-        <div class="defil"> Adressse , numéro de télèphone, ouvert 7/7 même après le couvre feu</div> 
+      <div class="defil">
+        Adressse , numéro de télèphone, ouvert 7/7 même après le couvre feu
+      </div>
     </div>
-<main>
-    <header id="head">
-		<img src="images/logo.png" class="logo">
-		<div class="toggle" onclick="toggleMenu();"></div>
-		<ul class="menu">
-			<li class="anav"> <a href="../index.html" class="active" onclick="toggleMenu();">Home</a></li>
-			<li class="anav"> <a href="../product/product.html"  onclick="toggleMenu();"> Nos produits </a> </li>
-			<li class="anav"> <a href="../crew/crew.html" onclick="toggleMenu();"> Crew</a></li>
-			<li class="anav"> <a href="../contact/contact.html" onclick="toggleMenu();"> Contact</a></li>
-		</ul>
-    </header>  
-    
-    <section class="panier">
+    <main>
+      <header id="head">
+        <img src="images/logo.png" class="logo" />
+        <div class="toggle" onclick="toggleMenu();"></div>
+        <ul class="menu">
+          <li class="anav">
+            <a href="../index.html" class="active" onclick="toggleMenu();"
+              >Home</a
+            >
+          </li>
+          <li class="anav">
+            <a href="../product/product.html" onclick="toggleMenu();">
+              Nos produits
+            </a>
+          </li>
+          <li class="anav">
+            <a href="../crew/crew.html" onclick="toggleMenu();"> Crew</a>
+          </li>
+          <li class="anav">
+            <a href="../contact/contact.html" onclick="toggleMenu();">
+              Contact</a
+            >
+          </li>
+        </ul>
+      </header>
+
+      <section class="panier">
         <div class="panier_title">Commandez en ligne</div>
         <div class="panier_user">
-            <div class="panier_icon"><i class="fas fa-shopping-cart"></i>
-            <h2>Votre panier</h2></div> 
-            <p class="panierBox"></p>           
-            <p class="panier_item"></p>
-            <p class="panierPriceStorage"></p>
-            <p class="panier_price"><i class="fas fa-euro-sign"></i></p>
-            <a><button class="check_panier" onclick="setData()">Valider votre panier</button></a>
+          <div class="panier_icon">
+            <i class="fas fa-shopping-cart"></i>
+            <h2>Votre panier</h2>
+          </div>
+          <p class="panierBox"></p>
+          <p class="panier_item"></p>
+          <p class="panierPriceStorage"></p>
+          <p class="panier_price"><i class="fas fa-euro-sign"></i></p>
+          <a
+            ><button class="check_panier" onclick="setData()">
+              Valider votre panier
+            </button></a
+          >
         </div>
-    </section>
-    
-    <section class="box_viennoiserie">
+      </section>
+
+      <section class="box_viennoiserie">
         <h1>Nos viennoiseries</h1>
         <div class="box_card">
-
-        <div class="card" id="cardCroissant">
-            <img src="./images/croissant.png">
+          <div class="card" id="cardCroissant">
+            <img src="./images/croissant.png" />
             <h3>Le croissant au beurre</h3>
-            <p class="card_text">Notre croissant au beurre de Noirmourtier et si croustillant que Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique vitae voluptatem animi quaerat ad veritatis ut earum cum quo cupiditate, minima possimus quod non repellat, laboriosam esse, dolor eligendi cumque!</p>
+            <p class="card_text">
+              Notre croissant au beurre de Noirmourtier et si croustillant que
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
+              vitae voluptatem animi quaerat ad veritatis ut earum cum quo
+              cupiditate, minima possimus quod non repellat, laboriosam esse,
+              dolor eligendi cumque!
+            </p>
             <div class="card_add">
-                <div class="price">
-                    <p> 1,10 euros</p>
-                </div>
-                <div class="add_button">
-                    <p class="addPanier">Ajoutez au panier</p>
-                    <button class="button1" id="card1">+</button>
-                    <p class="card1">0</p>
-                    <button class="button2" id="card1">-</button>
-                </div>
-                <div class="add_buttonok">
-                    <button class="ok" id="card1">Ok</button>
-                </div>
+              <div class="price">
+                <p>1,10 euros</p>
+              </div>
+              <div class="add_button">
+                <p class="addPanier">Ajoutez au panier</p>
+                <button class="button1" id="card1">+</button>
+                <p class="card1">0</p>
+                <button class="button2" id="card1">-</button>
+              </div>
+              <div class="add_buttonok">
+                <button class="ok" id="card1">Ok</button>
+              </div>
             </div>
-        </div>
+          </div>
 
-        <div class="card" id="cardPainRaisin">
-            <img src="./images/raisin.png">
+          <div class="card" id="cardPainRaisin">
+            <img src="./images/raisin.png" />
             <h3>Le pain aux raisins</h3>
-            <p class="card_text">Notre pain aux raisins au raisin d'Italie est si bon que Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique vitae voluptatem animi quaerat ad veritatis ut earum cum quo cupiditate, minima possimus quod non repellat, laboriosam esse, dolor eligendi cumque!</p>
+            <p class="card_text">
+              Notre pain aux raisins au raisin d'Italie est si bon que Lorem
+              ipsum dolor sit amet consectetur adipisicing elit. Similique vitae
+              voluptatem animi quaerat ad veritatis ut earum cum quo cupiditate,
+              minima possimus quod non repellat, laboriosam esse, dolor eligendi
+              cumque!
+            </p>
             <div class="card_add">
-                <div class="price">
-                    <p> 1,30 euros</p>
-                </div>
-                <div class="add_button">
-                    <p class="addPanier">Ajoutez au panier</p>
-                    <button class="button1" id="card2">+</button>
-                    <p class="card2">0</p>
-                    <button class="button2" id="card2">-</button>
-                </div>
-                <div class="add_buttonok">
-                    <button class="ok" id="card2">Ok</button>
-                </div>
+              <div class="price">
+                <p>1,30 euros</p>
+              </div>
+              <div class="add_button">
+                <p class="addPanier">Ajoutez au panier</p>
+                <button class="button1" id="card2">+</button>
+                <p class="card2">0</p>
+                <button class="button2" id="card2">-</button>
+              </div>
+              <div class="add_buttonok">
+                <button class="ok" id="card2">Ok</button>
+              </div>
             </div>
-        </div>
+          </div>
 
-        <div class="card" id="cardPainChocolat">
-            <img src="./images/choco.png">
+          <div class="card" id="cardPainChocolat">
+            <img src="./images/choco.png" />
             <h3>Le pain au chocolat</h3>
-            <p class="card_text">Le véritable pain au chocolat Parisien qui Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique vitae voluptatem animi quaerat ad veritatis ut earum cum quo cupiditate, minima possimus quod non repellat, laboriosam esse, dolor eligendi cumque!</p>
+            <p class="card_text">
+              Le véritable pain au chocolat Parisien qui Lorem ipsum dolor sit
+              amet consectetur adipisicing elit. Similique vitae voluptatem
+              animi quaerat ad veritatis ut earum cum quo cupiditate, minima
+              possimus quod non repellat, laboriosam esse, dolor eligendi
+              cumque!
+            </p>
             <div class="card_add">
-                <div class="price">
-                    <p> 1,50 euros</p>
-                </div>
-                <div class="add_button">
-                    <p class="addPanier">Ajoutez au panier</p>
-                    <button class="button1" id="card3">+</button>
-                    <p class="card3">0</p>
-                    <button class="button2" id="card3">-</button>
-                </div>
-                <div class="add_buttonok">
-                    <button class="ok" id="card3">Ok</button>
-                </div>
+              <div class="price">
+                <p>1,50 euros</p>
+              </div>
+              <div class="add_button">
+                <p class="addPanier">Ajoutez au panier</p>
+                <button class="button1" id="card3">+</button>
+                <p class="card3">0</p>
+                <button class="button2" id="card3">-</button>
+              </div>
+              <div class="add_buttonok">
+                <button class="ok" id="card3">Ok</button>
+              </div>
             </div>
+          </div>
         </div>
+      </section>
 
-        
-        </div>
-    </section>
-
-    <section class="box_snacking">
+      <section class="box_snacking">
         <h1>Nos snacks</h1>
         <div class="box_card">
-        <div class="card" id="card4">
-            <img src="./images/tacos.png">
+          <div class="card" id="card4">
+            <img src="./images/tacos.png" />
             <h3>Le frenchy Tacos</h3>
-            <p class="card_text">Notre tacos à la francaise est si fondant que que Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique vitae voluptatem animi quaerat ad veritatis ut earum cum quo cupiditate, minima possimus quod non repellat, laboriosam esse, dolor eligendi cumque!</p>
+            <p class="card_text">
+              Notre tacos à la francaise est si fondant que que Lorem ipsum
+              dolor sit amet consectetur adipisicing elit. Similique vitae
+              voluptatem animi quaerat ad veritatis ut earum cum quo cupiditate,
+              minima possimus quod non repellat, laboriosam esse, dolor eligendi
+              cumque!
+            </p>
             <div class="card_add">
-                <div class="price">
-                    <p> 3,50 euros</p>
-                </div>
-                <div class="add_button">
-                    <p class="addPanier">Ajoutez au panier</p>
-                    <button id="button1+">+</button>
-                    <p id="result4">0</p>
-                    <button id="button1-">-</button>
-                </div>
-                <div class="add_buttonok">
-                    <button id="ok1">Ok</button>
-                </div>
+              <div class="price">
+                <p>3,50 euros</p>
+              </div>
+              <div class="add_button">
+                <p class="addPanier">Ajoutez au panier</p>
+                <button id="button1+">+</button>
+                <p id="result4">0</p>
+                <button id="button1-">-</button>
+              </div>
+              <div class="add_buttonok">
+                <button id="ok1">Ok</button>
+              </div>
             </div>
-        </div>
+          </div>
 
-        <div class="card" id="card5">
-            <img src="./images/tacosmex.png">
+          <div class="card" id="card5">
+            <img src="./images/tacosmex.png" />
             <h3>Le tacos Mex</h3>
-            <p class="card_text">Le réel tacos mexician garanti 100% que Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique vitae voluptatem animi quaerat ad veritatis ut earum cum quo cupiditate, minima possimus quod non repellat, laboriosam esse, dolor eligendi cumque!</p>
+            <p class="card_text">
+              Le réel tacos mexician garanti 100% que Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Similique vitae voluptatem animi
+              quaerat ad veritatis ut earum cum quo cupiditate, minima possimus
+              quod non repellat, laboriosam esse, dolor eligendi cumque!
+            </p>
             <div class="card_add">
-                <div class="price">
-                    <p> 3,00 euros</p>
-                </div>
-                <div class="add_button">
-                    <p class="addPanier">Ajoutez au panier</p>
-                    <button>+</button>
-                    <p id="result5">0</p>
-                    <button>-</button>
-                </div>
-                <div class="add_buttonok">
-                    <button>Ok</button>
-                </div>
+              <div class="price">
+                <p>3,00 euros</p>
+              </div>
+              <div class="add_button">
+                <p class="addPanier">Ajoutez au panier</p>
+                <button>+</button>
+                <p id="result5">0</p>
+                <button>-</button>
+              </div>
+              <div class="add_buttonok">
+                <button>Ok</button>
+              </div>
             </div>
-        </div>
+          </div>
 
-        <div class="card" id="card6">
-            <img src="./images/panini.png">
+          <div class="card" id="card6">
+            <img src="./images/panini.png" />
             <h3>Le panini</h3>
-            <p class="card_text">La panini traditionnel qui Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique vitae voluptatem animi quaerat ad veritatis ut earum cum quo cupiditate, minima possimus quod non repellat, laboriosam esse, dolor eligendi cumque!</p>
+            <p class="card_text">
+              La panini traditionnel qui Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Similique vitae voluptatem animi quaerat ad
+              veritatis ut earum cum quo cupiditate, minima possimus quod non
+              repellat, laboriosam esse, dolor eligendi cumque!
+            </p>
             <div class="card_add">
-                <div class="price">
-                    <p> 3,25 euros</p>
-                </div>
-                <div class="add_button">
-                    <p class="addPanier">Ajoutez au panier</p>
-                    <button>+</button>
-                    <p id="result6">0</p>
-                    <button>-</button>
-                </div>
-                <div class="add_buttonok">
-                    <button>Ok</button>
-                </div>
+              <div class="price">
+                <p>3,25 euros</p>
+              </div>
+              <div class="add_button">
+                <p class="addPanier">Ajoutez au panier</p>
+                <button>+</button>
+                <p id="result6">0</p>
+                <button>-</button>
+              </div>
+              <div class="add_buttonok">
+                <button>Ok</button>
+              </div>
             </div>
+          </div>
         </div>
-
-        
-        </div>
-    </section>
-</main>
+      </section>
+    </main>
     <script src="commande2.js"></script>
-    </body>
-    </html>
+  </body>
+</html>

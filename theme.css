@@ -1,90 +1,85 @@
+.btnmode1 {
+  position: absolute;
+  bottom: 0px;
+  left: 120px;
+  border-radius: 5px 5px 0px 0px;
+  background-color: #ff7eb4;
+  border: none;
+  color: #fff;
+  padding: 10px 10px 5px 10px;
+  font-style: italic;
+  font-family: "Bad Script", cursive;
+  font-size: 20px;
+  transition: 0.6s;
+  outline: none;
+}
 
+.btnmode2 {
+  position: absolute;
+  bottom: 0px;
+  left: 250px;
+  border-radius: 5px 5px 0px 0px;
+  background-color: #003249;
+  border: none;
+  color: #fff;
+  padding: 10px 10px 5px 10px;
+  font-style: italic;
+  font-family: "Bad Script", cursive;
+  font-size: 20px;
+  transition: 0.6s;
+  outline: none;
+}
 
-.btnmode1{
+.btnmode1.active {
+  padding-bottom: 15px;
+}
+.btnmode2.active {
+  padding-bottom: 15px;
+}
+
+.banner.candy-mode {
+  background-image: url(images/bonbonbanner.png);
+  color: #fff;
+}
+.acceuilBox_box1.candy-mode {
+  background-color: #fd62a3;
+  color: #fff;
+}
+
+#head.candy-mode.sticky {
+  background-color: #ffb1d2;
+  filter: invert(0);
+}
+
+.banner.tacos-mode {
+  background-image: url(images/tacosbanner.png);
+  color: #fff;
+}
+.acceuilBox_box1.tacos-mode {
+  background-color: #bafd62;
+  color: #fff;
+}
+#head.tacos-mode.sticky {
+  background-color: #bafd62;
+  filter: invert(0);
+}
+
+@media screen and (max-width: 640px) {
+  .btnmode1 {
     position: absolute;
     bottom: 0px;
-    left: 120px;
-    border-radius: 5px 5px 0px 0px;
-    background-color: #ff7eb4;
-    border: none;
-    color: #fff;
-    padding: 10px 10px 5px 10px;
-    font-style: italic;
-    font-family: 'Bad Script', cursive;
-    font-size: 20px;
-    transition: 0.6s;
-    outline: none;   
-}
+    left: 10px;
+    padding: 5px 5px 5px 5px;
+    font-size: 10px;
+  }
 
-.btnmode2{
+  .btnmode2 {
     position: absolute;
     bottom: 0px;
-    left: 250px;
-    border-radius: 5px 5px 0px 0px;
-    background-color: #003249;
-    border: none;
-    color: #fff;
-    padding: 10px 10px 5px 10px;
-    font-style: italic;
-    font-family: 'Bad Script', cursive;
-    font-size: 20px;
-    transition: 0.6s;
-    outline: none; 
-}
-
-.btnmode1.active{
-    padding-bottom: 15px;
-    
-}
-.btnmode2.active{
-    padding-bottom: 15px;
-}
-
-.banner.candy-mode{
-    background-image: url(images/bonbonbanner.png);
-    color: #fff;
-}
-.acceuilBox_box1.candy-mode{
-    background-color:#fd62a3;
-    color: #fff;
-}
-
-#head.candy-mode.sticky{
-    background-color: #ffb1d2;
-    filter: invert(0);
-}
-
-.banner.tacos-mode{
-    background-image: url(images/tacosbanner.png);
-    color: #fff;
-}
-.acceuilBox_box1.tacos-mode{
-    background-color:#bafd62;
-    color: #fff;
-}
-#head.tacos-mode.sticky{
-    background-color: #bafd62;
-    filter: invert(0);
-}
-
-@media screen and (max-width: 640px){
-
-    .btnmode1{
-        position: absolute;
-        bottom: 0px;
-        left: 10px; 
-        padding: 5px 5px 5px 5px;
-        font-size: 10px;
-        
-    }
-    
-    .btnmode2{
-        position: absolute;
-        bottom: 0px;
-        left: 80px; 
-        padding: 5px 5px 5px 5px;
-        font-size: 10px;
-    }
+    left: 80px;
+    padding: 5px 5px 5px 5px;
+    font-size: 10px;
+  }
 }
 
 /*

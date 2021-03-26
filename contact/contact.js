@@ -1,19 +1,19 @@
-window.addEventListener("scroll", function(){
-    var header = document.querySelector("header");
-    header.classList.toggle("sticky", window.scrollY > 0);
-})
-// toggle menu 
+window.addEventListener("scroll", function () {
+  var header = document.querySelector("header");
+  header.classList.toggle("sticky", window.scrollY > 0);
+});
+// toggle menu
 
-function toggleMenu(){
-	var menuToggle = document.querySelector('.toggle');
-	var menu = document.querySelector('.menu');
-	menuToggle.classList.toggle('active');
-	menu.classList.toggle('active');
+function toggleMenu() {
+  var menuToggle = document.querySelector(".toggle");
+  var menu = document.querySelector(".menu");
+  menuToggle.classList.toggle("active");
+  menu.classList.toggle("active");
 }
 
-const name = document.getElementById("name")
+const name = document.getElementById("name");
 const backgroundCroissant = document.querySelector(".containerContact");
 
-name.addEventListener('click', function (event){
-    backgroundCroissant.classList.toggle("visible")
+name.addEventListener("click", function (event) {
+  backgroundCroissant.classList.toggle("visible");
 });
