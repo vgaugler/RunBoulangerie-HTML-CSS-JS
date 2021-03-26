@@ -10,3 +10,10 @@ function toggleMenu(){
 	menuToggle.classList.toggle('active');
 	menu.classList.toggle('active');
 }
+
+const name = document.getElementById("name")
+const backgroundCroissant = document.querySelector(".containerContact");
+
+name.addEventListener('click', function (event){
+    backgroundCroissant.classList.toggle("visible")
+});

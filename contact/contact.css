@@ -107,7 +107,12 @@ header ul li a:hover
  background: #E1D3BF;
 }
 
-
+.containerContact.visible{
+  background-image: url(./images/tacos.png), url(./images/tacosred.jpg);
+  position: relative;
+  background-size: cover;
+  transition:0.9s;
+}
 .containerContact {
     background-image: url(./images/banner.png);
     position: relative;
